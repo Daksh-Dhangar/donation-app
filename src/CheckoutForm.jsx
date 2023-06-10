@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useLocation } from 'react-router-dom';
 import {
   PaymentElement,
   LinkAuthenticationElement,
@@ -51,6 +52,7 @@ export default function CheckoutForm({ amount }) {
   }, [stripe]);
 
   const handleSubmit = async (e) => {
+
     e.preventDefault();
     try {
       if (!stripe || !elements) {
@@ -65,7 +67,7 @@ export default function CheckoutForm({ amount }) {
         elements,
         confirmParams: {
           // Make sure to change this to your payment completion page
-          return_url: "http://localhost:3000",
+          return_url: `${window.location.origin}`,
         },
       });
 
@@ -122,3 +124,5 @@ export default function CheckoutForm({ amount }) {
     </>
   );
 }
+
+// "http://localhost:3000"

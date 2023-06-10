@@ -1,15 +1,25 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Pay from "./Pay";
 import { Navigate } from "react-router-dom";
 import Header from "./Header";
 
 function Home() {
     const [flag, setFlag] = useState(true);
-    const [amount, setAmount] = useState(32);
+    const [amount, setAmount] = useState(0);
     function handleClick(ev) {
         ev.preventDefault();
         setFlag(false);
     }
+    /*
+    useEffect(() => {
+        const url = `${process.env.REACT_APP_API_URL}/test`;
+        const response = fetch(url).then((response) => {
+            console.log(response.data);
+        }).catch(e => {
+            console.log(e);
+        });
+    },[])
+    */
     return (flag ? (
         <>
             <div className="text-white grid grid-cols-2 mt-4 text-xl" style={{ fontFamily: "'Open Sans', sans-serif" }}>

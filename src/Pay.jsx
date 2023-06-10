@@ -20,13 +20,17 @@ export default function Pay({amount}) {
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
     try {
-      fetch("/create-payment-intent", {
+      fetch(`${process.env.REACT_APP_API_URL}/create-payment-intent`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ items: amount }),
       })
         .then((res) => res.json())
-        .then((data) => setClientSecret(data.clientSecret));
+        .then(
+          (data) => {
+          console.log(data);
+          setClientSecret(data.clientSecret);
+          });
     }
     catch (e) {
 
