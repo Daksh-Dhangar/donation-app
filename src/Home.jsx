@@ -22,12 +22,12 @@ function Home() {
     */
     return (flag ? (
         <>
-            <div className="text-white grid grid-cols-2 mt-4 text-xl" style={{ fontFamily: "'Open Sans', sans-serif" }}>
+            <div className="text-white grid grid-cols-2 mt-4 text-md" style={{ fontFamily: "'Open Sans', sans-serif" }}>
                 <div className="text-center ">
                     <h2 className="mb-10 mt-2 text-2xl font-bold">
                         IMPORTANCE OF TREES
                     </h2>
-                    <div className="text-justify p-2 ">
+                    <div className="text-justify p-2">
                         Trees play a significant importance in our environment and human well-being. Trees provide us fresh water to drink,
                         air to breathe, shade, and food for humans, animals, and plants. Trees give habitats for various species of fauna
                         and flora, materials for construction, and places of spiritual, cultural, firewood for cooking, and heat and recreational
