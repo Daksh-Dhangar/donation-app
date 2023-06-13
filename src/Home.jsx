@@ -10,16 +10,7 @@ function Home() {
         ev.preventDefault();
         setFlag(false);
     }
-    /*
-    useEffect(() => {
-        const url = `${process.env.REACT_APP_API_URL}/test`;
-        const response = fetch(url).then((response) => {
-            console.log(response.data);
-        }).catch(e => {
-            console.log(e);
-        });
-    },[])
-    */
+    
     return (flag ? (
         <>
             <div className="text-white grid grid-cols-2 mt-4 text-md" style={{ fontFamily: "'Open Sans', sans-serif" }}>
@@ -33,18 +24,15 @@ function Home() {
                         and flora, materials for construction, and places of spiritual, cultural, firewood for cooking, and heat and recreational
                         importance. Trees are so essential for the global environment and the health of the species that live there. And they
                         want our unconditional care and protection.
-                        Trees also play an important part in every community. Streets, parks, playgrounds, and backyards are filled with trees
-                        that form a peaceful, aesthetically pleasing atmosphere.
-
-                        Trees also play an important part in every community. Streets, parks, playgrounds, and backyards are filled with trees
-                        that form a peaceful, aesthetically pleasing atmosphere.
-
-                        Trees also play an important part in every community. Streets, parks, playgrounds, and backyards are filled with trees
-                        that form a peaceful, aesthetically pleasing atmosphere.
-                    </div>
+                    </div><br/>
+                    <div className="text-justify p-2 font-bold">
+                        This is an NGO dedicated for preservation of forests. Play your part by donating for this greater cause...
+                        <p>(At maximum 10,000$ in a single transaction.)</p>
+                        <p>(Successful payment redirects to homepage.)</p>
+                    </div><br/><br/>
                 </div>
                 <div className="text-center flex flex-col justify-center font-bold bg-[#8533ff]/30 -mt-4 -mb-[80px] text-gray-300">
-
+                    {/* */}
                     <div className="text-2xl">
                         PAYMENT
                     </div>
