@@ -15,7 +15,7 @@ function Home() {
         <>
             <div className="text-white grid grid-cols-2 mt-4 text-md" style={{ fontFamily: "'Open Sans', sans-serif" }}>
                 <div className="text-center ">
-                    <h2 className="mb-8 mt-2 text-2xl font-bold">
+                    <h2 className="mb-4 mt-2 text-2xl font-bold">
                         IMPORTANCE OF TREES
                     </h2>
                     <div className="text-justify p-2">
